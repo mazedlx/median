@@ -5,6 +5,11 @@ class Median
 {
     protected $array;
 
+    /**
+     * Class constructor
+     *
+     * @param array $array
+     */
     public function __construct($array)
     {
         $this->array = $array;
@@ -23,7 +28,6 @@ class Median
     /**
      * Returns the average value of all array values
      *
-     * @param  array $array
      * @return mixed
      */
     public function average()
@@ -34,7 +38,6 @@ class Median
     /**
      * Returns the median of all array values
      *
-     * @param  array $array
      * @return mixed
      */
     public function median()

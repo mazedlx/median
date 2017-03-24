@@ -1,4 +1,4 @@
-![](https://travis-ci.org/mazedlx/median.svg?branch=master)
+[![Build Status](https://travis-ci.org/mazedlx/median.svg?branch=master)](https://travis-ci.org/mazedlx/median)
 
 # median
 Super simple PHP library for getting the median of array values (cn also calc the average of the array's elements).

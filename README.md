@@ -3,6 +3,10 @@
 # median
 Super simple PHP library for getting the median of array values (cn also calc the average of the array's elements).
 
+## Installation and Usage
+
+`composer install mazedlx/median`
+
 ```php
 $arrayOfValues = [1, 2, 5, 1000, 7]
 $m = new Median($arrayOfValues);

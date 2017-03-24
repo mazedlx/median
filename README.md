@@ -1,7 +1,7 @@
 ![](https://travis-ci.org/mazedlx/median.svg?branch=master)
 
 # median
-Super simple PHP library for getting the median of array values (also returns the avg of the array
+Super simple PHP library for getting the median of array values (cn also calc the average of the array's elements).
 
 ```php
 $arrayOfValues = [1, 2, 5, 1000, 7]

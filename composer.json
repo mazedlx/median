@@ -4,6 +4,7 @@
             "Median\\": "src/Median"
         }
     },
+    "license": "MIT",
     "require": {
         "phpspec/phpspec": "^3.0"
     },

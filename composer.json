@@ -6,5 +6,7 @@
     },
     "require": {
         "phpspec/phpspec": "^3.0"
-    }
+    },
+    "name": "mazedlx/median",
+    "description": "Super simple median calculation",
 }

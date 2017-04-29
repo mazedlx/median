@@ -46,7 +46,7 @@ class Median
             $midpoint_in_array = (int) floor((count($array) / 2));
             return ($array[$midpoint_in_array]);
         } else {
-            $lower_midpoint_of_array = (int) floor(count($array) / 2);
+            $lower_midpoint_of_array = (int) (floor(count($array) / 2) - 1);
             $upper_midpoint_of_array = $lower_midpoint_of_array + 1;
 
             $average_of_upper_and_lower_midpoints = ($array[$lower_midpoint_of_array] + $array[$upper_midpoint_of_array]) / 2;
@@ -56,8 +56,8 @@ class Median
     }
 }
 
-$test_array_1  = [1, 2, 3, 10, 5, 6, 1, 3, 4];
-$test_array_2  = [1, 2, 3, 10, 5, 6, 1, 3];
+$test_array_1  = [1, 2, 3, 10, 5, 6, 1, 3];
+$test_array_2  = [1, 2, 3, 10, 5, 6, 1, 3, 4];
 
 echo "Median: " . Median::median($test_array_1) . "\n";
 echo "Median: " . Median::median($test_array_2) . "\n";

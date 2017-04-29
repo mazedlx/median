@@ -42,7 +42,6 @@ class Median
     public function median()
     {
         $array = $this->array;
-        print_r($array);
         $midpoint_in_array = (int) floor((count($array) / 2));
         if (count($array) % 2 != 0) {
             return ($array[$midpoint_in_array]);
@@ -54,8 +53,3 @@ class Median
         }
     }
 }
-
-$test_array  = [1, 2, 3, 10, 5, 6, 1, 4];
-$median = new Median($test_array);
-echo "Median: " . $median->median() . "\n";
-

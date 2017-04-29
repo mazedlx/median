@@ -54,8 +54,3 @@ class Median
         }
     }
 }
-
-$test_array  = array(1, 2, 3, 4, 5, 6);
-$median      = new Median($test_array);
-
-echo "Median: {$median->median()}\n";

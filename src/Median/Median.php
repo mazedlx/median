@@ -41,15 +41,14 @@ class Median
      */
     public function median()
     {
-        $array = $this->array;
-        $midpoint_in_array = (int) floor((count($array) / 2));
-        if (count($array) % 2 != 0) {
-            return ($array[$midpoint_in_array]);
+        $array_midpoint = (int) floor((count($this->array) / 2));
+        if (count($this->array) % 2 != 0) {
+            return ($this->array[$array_midpoint]);
         } else {
-            $lower_midpoint_in_array = $midpoint_in_array - 1;
-            $average_of_upper_and_lower_midpoints = ($array[$lower_midpoint_in_array] + $array[$midpoint_in_array]) / 2;
+            $array_midpoint_lower = $array_midpoint - 1;
+            $average_of_midpoints = ($this->array[$array_midpoint_lower] + $this->array[$array_midpoint]) / 2;
 
-            return $average_of_upper_and_lower_midpoints;
+            return $average_of_midpoints;
         }
     }
 }

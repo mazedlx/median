@@ -42,16 +42,12 @@ class Median
      */
     public function median()
     {
-        if (count($this->array) % 2 == 0) {
-            $count = count($this->array);
-            echo "Count: {$count}/n";
-            return ($this->array[(count($this->array)/2 - 1)]);
+        if (count($this->array) % 2 != 0) {
+            return ($this->array[(count($this->array)/2)]);
         } else {
             // get the upper/lower of the 2 middle values in the array
             $lower_middle_of_array      = floor(count($this->array) / 2);
-            echo $lower_middle_of_array;
             $upper_middle_of_array      = $lower_middle_of_array + 1;
-            echo $upper_middle_of_array;
             $average_of_upper_and_lower = ($lower_middle_of_array + $upper_middle_of_array)/2;
 
             return $average_of_upper_and_lower;
@@ -59,7 +55,7 @@ class Median
     }
 }
 
-$test_array  = array(1, 2, 3, 4, 5, 6, 7, 8);
+$test_array  = array(1, 2, 3, 4, 5, 6);
 $median      = new Median($test_array);
 
 echo "Median: {$median->median()}\n";

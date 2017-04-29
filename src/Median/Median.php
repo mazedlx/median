@@ -10,7 +10,7 @@ class Median
      * @param $array
      * @throws \Exception
      */
-    public function __construct($array)
+    public function __construct()
     {
         $this->array = $array;
 
@@ -37,20 +37,27 @@ class Median
 
     /**
      * Returns the median of all array values
-     *
-     * @return mixed
+     * @param $array
+     * @return float|int
      */
-    public function median()
+    public static function median($array)
     {
-        if (count($this->array) % 2 != 0) {
-            return ($this->array[(count($this->array)/2)]);
+        if (count($array) % 2 != 0) {
+            $midpoint_in_array = (int) floor((count($array) / 2));
+            return ($array[$midpoint_in_array]);
         } else {
-            // get the upper/lower of the 2 middle values in the array
-            $lower_middle_of_array      = floor(count($this->array) / 2);
-            $upper_middle_of_array      = $lower_middle_of_array + 1;
-            $average_of_upper_and_lower = ($lower_middle_of_array + $upper_middle_of_array)/2;
+            $lower_midpoint_of_array = (int) floor(count($array) / 2);
+            $upper_midpoint_of_array = $lower_midpoint_of_array + 1;
 
-            return $average_of_upper_and_lower;
+            $average_of_upper_and_lower_midpoints = ($array[$lower_midpoint_of_array] + $array[$upper_midpoint_of_array]) / 2;
+
+            return $average_of_upper_and_lower_midpoints;
         }
     }
 }
+
+$test_array_1  = [1, 2, 3, 10, 5, 6, 1, 3, 4];
+$test_array_2  = [1, 2, 3, 10, 5, 6, 1, 3];
+
+echo "Median: " . Median::median($test_array_1) . "\n";
+echo "Median: " . Median::median($test_array_2) . "\n";

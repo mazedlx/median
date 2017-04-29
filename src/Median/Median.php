@@ -10,7 +10,7 @@ class Median
      * @param $array
      * @throws \Exception
      */
-    public function __construct()
+    public function __construct($array)
     {
         $this->array = $array;
 
@@ -37,11 +37,12 @@ class Median
 
     /**
      * Returns the median of all array values
-     * @param $array
      * @return float|int
      */
-    public static function median($array)
+    public function median()
     {
+        $array = $this->array;
+        print_r($array);
         $midpoint_in_array = (int) floor((count($array) / 2));
         if (count($array) % 2 != 0) {
             return ($array[$midpoint_in_array]);
@@ -54,8 +55,7 @@ class Median
     }
 }
 
-$test_array  = [1, 2, 3, 10, 5, 6, 1, 3];
-echo "Median: " . Median::median($test_array) . "\n";
-$test_array  = [1, 2, 3, 10, 5, 6, 1, 3, 4];
-echo "Median: " . Median::median($test_array) . "\n";
+$test_array  = [1, 2, 3, 10, 5, 6, 1, 4];
+$median = new Median($test_array);
+echo "Median: " . $median->median() . "\n";
 

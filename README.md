@@ -11,8 +11,8 @@ Super simple PHP library for getting the median of array values (cn also calc th
 $arrayOfValues = [1, 2, 5, 1000, 7]
 $m = new Median($arrayOfValues);
 
-$avh = $m->average();
-// $avh == 203
+$avg= $m->average();
+// $avg == 203
 
 $median = $m->median();
 // $median == 5

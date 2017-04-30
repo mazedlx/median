@@ -46,9 +46,7 @@ class Median
             return ($this->array[$arrayMidpoint]);
         } else {
             $arrayMidpointLower = $arrayMidpoint - 1;
-            $averageOfMidpoints = ($this->array[$arrayMidpointLower] + $this->array[$arrayMidpoint]) / 2;
-
-            return $averageOfMidpoints;
+            return ($this->array[$arrayMidpointLower] + $this->array[$arrayMidpoint]) / 2;
         }
     }
 }

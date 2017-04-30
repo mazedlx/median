@@ -57,4 +57,25 @@ class MedianSpec extends ObjectBehavior
         $this->beConstructedWith($array);
         $this->median($array)->shouldEqual(9);
     }
+
+    function it_should_return_a_median_of_3point5_for_1_2_3_4_5_6()
+    {
+        $array = [1,2,3,4,5,6];
+        $this->beConstructedWith($array);
+        $this->median($array)->shouldEqual(3.5);
+    }
+
+    function it_should_return_a_median_of_4point5_for_1_2_3_4_5_6_7_8()
+    {
+        $array = [1,2,3,4,5,6,7,8];
+        $this->beConstructedWith($array);
+        $this->median($array)->shouldEqual(4.5);
+    }
+
+    function it_should_return_a_median_of_56_for_66_13_46_378_336_26_4_77_5_92()
+    {
+        $array = [66,13,46,378,336,26,4,77,5,92];
+        $this->beConstructedWith($array);
+        $this->median($array)->shouldEqual(56);
+    }
 }

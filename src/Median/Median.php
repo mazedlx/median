@@ -6,9 +6,9 @@ class Median
     protected $array;
 
     /**
-     * Class constructor
-     *
-     * @param array $array
+     * Median constructor.
+     * @param $array
+     * @throws \Exception
      */
     public function __construct($array)
     {
@@ -37,15 +37,16 @@ class Median
 
     /**
      * Returns the median of all array values
-     *
-     * @return mixed
+     * @return float|int
      */
     public function median()
     {
-        if (count($this->array) %2 == 0) {
-            return ($this->array[(count($this->array)/2 - 1)]);
+        $arrayMidpoint = (int) floor((count($this->array) / 2));
+        if (count($this->array) % 2 != 0) {
+            return ($this->array[$arrayMidpoint]);
         } else {
-            return $this->array[floor(count($this->array)/2)];
+            $arrayMidpointLower = $arrayMidpoint - 1;
+            return ($this->array[$arrayMidpointLower] + $this->array[$arrayMidpoint]) / 2;
         }
     }
 }

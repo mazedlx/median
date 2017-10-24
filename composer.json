@@ -5,7 +5,7 @@
         }
     },
     "license": "MIT",
-    "require": {
+    "require-dev": {
         "phpspec/phpspec": "^3.0"
     },
     "name": "mazedlx/median",
